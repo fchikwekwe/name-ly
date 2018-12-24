@@ -5,6 +5,9 @@
 ### Environment Variables ###
 .env
 
+### IDE Config ###
+.editorconfig
+
 ### ESLint ###
 .eslintrc.json
 .eslintrc.js
