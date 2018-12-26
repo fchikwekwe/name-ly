@@ -4,5 +4,5 @@ module.exports = (app) => {
     // ROOT
     app.get('/', (req, res) => {
         res.render('quiz');
-    })
-}
+    });
+};

@@ -2,9 +2,6 @@
 # Created by https://www.gitignore.io/api/node,macos
 # Edit at https://www.gitignore.io/?templates=node,macos
 
-### Environment Variables ###
-.env
-
 ### IDE Config ###
 .editorconfig
 

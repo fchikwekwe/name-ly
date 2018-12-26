@@ -19,8 +19,9 @@
 
 ## To Do - v0
 - Build quiz front end
-- Build about page
+- Get user input from quiz to determine corpus
+- About page template
 - CRUD user w/ JWTs
-- Algorithm that adds user selected texts to corpus
+- Profile page template
 - Implement stochastic sampling and Markov chain
 - Link python processes to Node app (https://www.sohamkamani.com/blog/2015/08/21/python-nodejs-comm/)
