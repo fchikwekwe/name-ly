@@ -18,10 +18,11 @@
 3. Re-design front end
 
 ## To Do - v0
-- Build quiz front end
+- Write quiz questions and answers
+- Find corpus examples based on possible quiz answers
+- Build simple quiz template
 - Get user input from quiz to determine corpus
-- About page template
-- CRUD user w/ JWTs
+- Implement stochastic sampling and Markov chain (might have to implement them using javascript; another possibility is finding a way to link python processes to Node https://www.sohamkamani.com/blog/2015/08/21/python-nodejs-comm/)
 - Profile page template
-- Implement stochastic sampling and Markov chain
-- Link python processes to Node app (https://www.sohamkamani.com/blog/2015/08/21/python-nodejs-comm/)
+- CRUD users w/ JWTs
+- About page template
