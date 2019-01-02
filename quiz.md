@@ -23,7 +23,7 @@ Business name
 3. What cultural influence would you like your name options to have?
 - American
 - British
-
+-----------
 - Arabic
 - Celtic
 - Chinese
