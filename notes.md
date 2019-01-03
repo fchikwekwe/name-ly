@@ -17,6 +17,7 @@
 3. Re-design front end
 
 ## To Do - v0
+- Write a function in API that checks if names are already in name list
 - Write quiz questions and answers
 - Find corpus examples based on possible quiz answers
 - Build simple quiz template
