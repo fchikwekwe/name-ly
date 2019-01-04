@@ -9,6 +9,9 @@
 Person name
 - Classic
 - Unique
+- Masculine
+- Feminine
+- Gender Neutral
 
 Character name
 - Fantasy

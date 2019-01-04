@@ -11,7 +11,7 @@ Grey: #F6F6F6;
 quiz {
     background-color: #533875;
 }
-
+/*
 @mixin box-sizing($type) {
   -moz-box-sizing: $type;
   -webkit-box-sizing: $type;
@@ -116,4 +116,4 @@ quiz {
 	font-family: Helvetica,arial,sans-serif;
 	font-size: 50px;
 	color: #047E3C;
-}
+} */
