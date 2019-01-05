@@ -1,4 +1,5 @@
 /** Put routes for quiz and selection here */
+const request = require('request');
 
 module.exports = (app) => {
     // ROOT
@@ -7,5 +8,13 @@ module.exports = (app) => {
     });
 
     // Quiz Post
-
+    app.post('/quizzes', (req, res, next) => {
+        const params = req.params;
+        request.get({
+            uri: 'http://namedlyapi.herokuapp.com/api',
+            qs: params, // Send required data
+        }, (err, response, body) => {
+            console.log(body);
+        });
+    });
 };
