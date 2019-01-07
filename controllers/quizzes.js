@@ -13,7 +13,7 @@ module.exports = (app) => {
         request.get({
             uri: 'http://namedlyapi.herokuapp.com/api',
             qs: params, // Send required data
-        }, (err, response, body) => {
+        }, (err, res, body) => {
             console.log(body);
         });
     });
