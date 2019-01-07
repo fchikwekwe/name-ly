@@ -9,11 +9,11 @@ module.exports = (app) => {
 
     // Quiz Post
     app.post('/quizzes', () => {
-        // eventually move this to an event listener
-        axios.post('https://name-ly-api.herokuapp.com/api', {
-            questionOne: 'feminine',
-            questionTwo: 'celtic',
-            questionThree: 'fantasy',
+        // eventually move this to a client side JS event listener behind a button
+        axios.post('https://name-ly-api.herokuapp.com/', {
+            gender: 'feminine',
+            cultural: 'celtic',
+            literary: 'fantasy',
         })
             .then((response) => {
                 console.log(response);
