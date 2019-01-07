@@ -26,4 +26,5 @@
 - Profile page template
 - CRUD users w/ JWTs
 - About page template
-- use axios to send data 
+- use axios to send data
+-

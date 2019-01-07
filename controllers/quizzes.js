@@ -1,5 +1,5 @@
 /** Put routes for quiz and selection here */
-const request = require('request');
+const axios = require('axios');
 
 module.exports = (app) => {
     // ROOT
@@ -8,13 +8,18 @@ module.exports = (app) => {
     });
 
     // Quiz Post
-    app.post('/quizzes', (req, res, next) => {
-        const params = req.params;
-        request.get({
-            uri: 'http://namedlyapi.herokuapp.com/api',
-            qs: params, // Send required data
-        }, (err, res, body) => {
-            console.log(body);
-        });
+    app.post('/quizzes', () => {
+        // eventually move this to an event listener
+        axios.post('https://name-ly-api.herokuapp.com/api', {
+            questionOne: 'feminine',
+            questionTwo: 'celtic',
+            questionThree: 'fantasy',
+        })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     });
 };
