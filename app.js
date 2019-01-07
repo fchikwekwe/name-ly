@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
-const request = require('request');
+const axios = require('axios');
 
 /** Custom middleware */
 const checkAuth = (req, res, next) => {
@@ -46,7 +46,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(checkAuth);
-app.use(request);
+app.use(axios);
 
 /** Require controllers */
 // require('./controllers/auth.js')(app);

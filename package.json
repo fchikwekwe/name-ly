@@ -7,6 +7,10 @@
     "start": "node app.js",
     "test": "mocha --exit test/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fchikwekwe/name-ly.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -24,7 +28,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chai-http": "^4.2.0",
+    "chai-http": "^4.2.1",
     "cookie": "^0.3.1",
     "eslint": "^5.11.0",
     "eslint-config-airbnb-base": "^13.1.0",
