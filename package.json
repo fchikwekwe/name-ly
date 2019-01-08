@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fchikwekwe/name-ly.git"
+    "url": "git+https://github.com/fchikwekwe/name-ly.git"
   },
   "author": "",
   "license": "ISC",
@@ -35,5 +35,12 @@
     "eslint-plugin-import": "^2.14.0",
     "espree": "^5.0.0",
     "mocha": "^5.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/fchikwekwe/name-ly/issues"
+  },
+  "homepage": "https://github.com/fchikwekwe/name-ly#readme",
+  "directories": {
+    "test": "test"
   }
 }

@@ -1,37 +1,51 @@
-<div class="quiz">
-	<!-- Progress Meter -->
-	<div id="circle-container"></div>
-
-	<form action="">
-		<fieldset class="question question1">
-			<div class="content">
-				<legend>1. Which bacon?</legend>
-				<input type="radio" name="question1" id="turkey" class="btnQ">
-					<label for="turkey" class="btnQ"><span>Turkey bacon</span></label>
-				<input type="radio" name="question1" id="canadian">
-					<label for="canadian" class="btnQ"><span>Canadian bacon</span></label>
-				<input type="radio" name="question1" id="american">
-					<label for="american" class="btnQ"><span>American bacon</span></label>
-				<input type="radio" name="question1" id="beef">
-					<label for="beef" class="btnQ"><span>Beef bacon</span></label>
+<form method="POST" action="/quizzes">
+	<fieldset>
+		<legend>Welcome to Name-ly!</legend>
+		<div class="form-group">
+            <p>1. Which gender influence would you like?</p>
+			<div>
+				<input value="masculine" name="gender" type="radio"/>
+				<label for="feminine">Masculine</label>
 			</div>
-			<div class="button-space"></div>
-		</fieldset>
-
-		<fieldset class="q question2">
-			<div class="content">
-				<legend>2. How much?</legend>
-				<input type="radio" name="question2" id="1">
-					<label for="1" class="btnQ"><span>1</span></label>
-				<input type="radio" name="question2" id="2">
-					<label for="2" class="btnQ"><span>2</span></label>
-				<input type="radio" name="question2" id="3">
-					<label for="3" class="btnQ"><span>3</span></label>
-				<input type="radio" name="question2" id="99">
-					<label for="99" class="btnQ"><span>99</span></label>
+            <div>
+				<input value="feminine" name="gender" type="radio"  />
+				<label for="feminine">Feminine</label>
+            </div>
+			<div>
+				<input value="unisex" name="gender" type="radio" />
+				<label for="unisex">Unisex</label>
 			</div>
-			<div class="button-space"></div>
-		</fieldset>
-
-	</form>
-</div>
+        </div>
+		<div class="form-group">
+            <p>2. Which cultural influence would you like?</p>
+			<div>
+				<input value="American" name="cultural" type="radio"/>
+				<label for="American">American</label>
+			</div>
+			<div>
+				<input value="German" name="cultural" type="radio"/>
+				<label for="German">German</label>
+			</div>
+			<div>
+				<input value="Latin" name="cultural" type="radio"/>
+				<label for="Latin">Latin</label>
+			</div>
+        </div>
+		<div class="form-group">
+            <p>3. Which literary influence would you like?</p>
+			<div class="">
+				<input value="classic" name="literary" type="radio"/>
+				<label for="classic">Classic</label>
+			</div>
+			<div class="">
+				<input value="fantasy" name="literary" type="radio"/>
+				<label for="fantasy">Fantasy</label>
+			</div>
+			<div class="">
+				<input value="modern" name="literary" type="radio"/>
+				<label for="modern">Modern</label>
+			</div>
+        </div>
+		<input type="submit" value="Submit">
+	</fieldset>
+</form>
