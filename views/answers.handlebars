@@ -2,5 +2,13 @@
     <h1>Your Names:</h1>
 </div>
 <div class="row">
-    <p>{{response.data.name}}</p>
+    <ul>
+    {{#each names}}
+        <li>
+            <div class="">
+                {{this}}
+            </div>
+        </li>
+    {{/each}}
+    </ul>
 </div>

@@ -17,13 +17,14 @@ module.exports = (app) => {
                 // eventually move this to a client side JS event listener behind a button
                 axios.post('https://name-ly-api.herokuapp.com/', {
                     // convert terms to lower case to resolve edge cases
+                    nameNumber: 20,
                     gender: quiz.gender.toLowerCase(),
                     cultural: quiz.cultural.toLowerCase(),
                     literary: quiz.literary.toLowerCase(),
                 })
                     .then((response) => {
-                        console.log(response.data);
-                        res.render('answers', { response });
+                        const names = response.data.name;
+                        res.render('answers', { names });
                     })
                     .catch((err) => {
                         console.log(err.message);
