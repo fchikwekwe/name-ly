@@ -1,14 +1,17 @@
-<div class="row">
-    <h1>Your Names:</h1>
+<div>
+    <h2>Your Names:</h2>
+    <p>Choose the names you would like to save.</p>
+    <a href="/">Try again.</a>
 </div>
-<div class="row">
-    <ul>
+<br>
+<form action="" method="POST">
+    <fieldset>
     {{#each names}}
-        <li>
-            <div class="">
-                {{this}}
-            </div>
-        </li>
+        <div>
+            <input value="{{this}}" name="name" type="checkbox"/>
+            <label for="{{this}}">{{this}}</label>
+        </div>
     {{/each}}
-    </ul>
-</div>
+    <input type="submit" value="Submit">
+    </fieldset>
+</form>

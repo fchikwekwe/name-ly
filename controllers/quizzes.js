@@ -17,7 +17,7 @@ module.exports = (app) => {
                 // eventually move this to a client side JS event listener behind a button
                 axios.post('https://name-ly-api.herokuapp.com/', {
                     // convert terms to lower case to resolve edge cases
-                    nameNumber: 20,
+                    nameNumber: 10,
                     gender: quiz.gender.toLowerCase(),
                     cultural: quiz.cultural.toLowerCase(),
                     literary: quiz.literary.toLowerCase(),
@@ -29,6 +29,8 @@ module.exports = (app) => {
                     .catch((err) => {
                         console.log(err.message);
                     });
+            }).catch((err) => {
+                console.log(err.message);
             });
     });
 };
