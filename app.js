@@ -52,7 +52,7 @@ app.use(checkAuth);
 
 /** Require controllers */
 // require('./controllers/auth.js')(app);
-// require('./controllers/about.js')(app);
+require('./controllers/about.js')(app);
 require('./controllers/quizzes.js')(app);
 // require('./controllers/users.js')(app);
 
