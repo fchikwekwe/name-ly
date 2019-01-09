@@ -17,14 +17,18 @@
 3. Re-design front end
 
 ## To Do - v0
+- write tests for /quizzes profile routes and auth routes
+- make names clickable to allow user to save name to profile
+- CRUD users w/ JWTs
+- Profile page template
+- About page template
+- Work on improving look of UI
+
+# DONE
 - Write a function in API that checks if names are already in name list
 - Write quiz questions and answers
 - Find corpus examples based on possible quiz answers
 - Build simple quiz template
 - Get user input from quiz to determine corpus
-- Implement stochastic sampling and Markov chain (might have to implement them using javascript; another possibility is finding a way to link python processes to Node https://www.sohamkamani.com/blog/2015/08/21/python-nodejs-comm/)
-- Profile page template
-- CRUD users w/ JWTs
-- About page template
+- Implement stochastic sampling and Markov chain
 - use axios to send data
--

@@ -6,15 +6,17 @@ const should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('About', () => {
+describe('Quiz', () => {
     // TEST ROOT
-    it('should display quiz on /about GET', (done) => {
+    it('should display quiz on / GET', (done) => {
         chai.request(server)
-            .get('/about')
+            .get('/')
             .end((err, res) => {
                 res.should.have.status(200);
                 res.should.be.html;
                 done();
             });
     });
+
+    // TEST QUIZ POST
 });
