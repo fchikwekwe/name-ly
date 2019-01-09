@@ -15,6 +15,9 @@ const QuizSchema = new Schema({
         type: String,
         required: true,
     },
+    names: {
+        type: Array,
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
