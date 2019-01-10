@@ -4,6 +4,24 @@
     <a href="/">Try again.</a>
 </div>
 <br>
+<!-- If the user is already logged in,
+then we go straight to updating their profile -->
+{{#if currentUser}}
+<form action="/users/{{currentUser._id}}/answers?_method=PUT" method="POST">
+    <fieldset>
+    {{#each names}}
+        <div>
+            <input value="{{this}}" name="names" type="checkbox"/>
+            <label for="{{this}}">{{this}}</label>
+        </div>
+    {{/each}}
+    <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+{{else}}
+<!-- If they are not yet logged in,
+then we take the normal route through /answers -->
 <form action="/answers" method="POST">
     <fieldset>
     {{#each names}}
@@ -15,3 +33,4 @@
     <input type="submit" value="Submit">
     </fieldset>
 </form>
+{{/if}}

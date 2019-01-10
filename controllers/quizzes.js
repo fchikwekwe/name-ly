@@ -6,15 +6,19 @@ const Quiz = require('../models/quiz');
 module.exports = (app) => {
     // ROOT
     app.get('/', (req, res) => {
+        const currentUser = req.user;
         res.clearCookie('nameOptions');
         res.clearCookie('chosenNames');
-        res.render('quiz');
+        res.render('quiz', { currentUser });
     });
 
     app.get('/quizzes', (req, res) => {
-        console.log(req.cookies);
+        const currentUser = req.user;
         const names = req.cookies.nameOptions;
-        res.render('answers', { names });
+        res.render('answers', {
+            names,
+            currentUser,
+        });
     });
 
     // QUIZ POST

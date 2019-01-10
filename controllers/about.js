@@ -1,11 +1,25 @@
-/** Put the about us route here */
+/** Informational routes go here */
+
+const NameList = ('../models/nameList');
 
 module.exports = (app) => {
+    // About Page
     app.get('/about', (req, res) => {
-        res.render('about');
+        const currentUser = req.user;
+        res.render('about', { currentUser });
     });
 
+    // Name Gallery
     app.get('/names', (req, res) => {
-        res.render('names');
+        const currentUser = req.user;
+        NameList.find({}, (err, names) => {
+            res.render('names', {
+                names,
+                currentUser,
+            });
+        })
+            .catch((err) => {
+                console.log(err.message);
+            });
     });
 };

@@ -5,8 +5,12 @@ const User = require('../models/user');
 module.exports = (app) => {
     // SIGN-UP GET
     app.get('/sign-up', (req, res) => {
+        const currentUser = req.user;
         const nameList = req.cookies.chosenNames;
-        res.render('sign-up', { nameList });
+        res.render('sign-up', {
+            nameList,
+            currentUser,
+        });
     });
 
     // SIGN-UP POST
@@ -25,7 +29,6 @@ module.exports = (app) => {
                     maxAge: 900000,
                     httpOnly: true,
                 });
-                console.log(req.cookies);
                 res.redirect(`/users/${user._id}`);
             })
             .catch((err) => {
@@ -73,7 +76,13 @@ module.exports = (app) => {
                         maxAge: 900000,
                         httpOnly: true,
                     });
-                    res.redirect(`/users/${user._id}`);
+                    if (req.cookies.chosenNames) {
+                        console.log(req.cookies.chosenNames);
+                        res.redirect(`/users/${user._id}/update`);
+                    }
+                    else {
+                        res.redirect(`/users/${user._id}`);
+                    }
                 });
             })
             .catch((err) => {

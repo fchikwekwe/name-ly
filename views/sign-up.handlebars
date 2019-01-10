@@ -2,9 +2,11 @@
     <fieldset>
         <legend>Sign Up</legend>
         {{> user}}
+        {{#each nameList.names}}
         <div class="form-group">
-            <input class="form-control" id="nameList" type="hidden" name="nameList" value="{{nameList.names}}"/>
+            <input class="form-control" id="nameList" type="hidden" name="nameList" value="{{this}}"/>
         </div>
+        {{/each}}
 
         <div class="form-group">
             <a href="/sign-up">

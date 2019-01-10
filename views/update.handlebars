@@ -1,0 +1,16 @@
+<div>
+    <h2>Your Names:</h2>
+    <p>Please review and make any changes before updating.</p>
+</div>
+<br>
+<form action="/users/{{user._id}}/update?_method=PUT" method="POST">
+    <fieldset>
+        {{#each names}}
+            <div>
+                <input value="{{this}}" name="names" type="checkbox" checked>
+                <label for="{{this}}">{{this}}</label>
+            </div>
+        {{/each}}
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>

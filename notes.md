@@ -4,6 +4,9 @@
 3. Unique Human Name Generator ❄️
 
 ## To Do - v0
+- if new user, take quiz, sign up, see profile with names
+- if logged out user, take quiz, log in, confirm addition to profile
+- if logged in user, take quiz (form routes to put instead), see profile with updated names
 - write tests
 - Profile page template
 - About page template
