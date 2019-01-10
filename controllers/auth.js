@@ -50,7 +50,7 @@ module.exports = (app) => {
                 if (!user) {
                     // User not found
                     return res.status(401).send({
-                        message: 'Wrong username or password!'
+                        message: 'Wrong username or password!',
                     });
                 }
                 // Check the password
@@ -58,7 +58,7 @@ module.exports = (app) => {
                     if (!isMatch) {
                         // Password does not match
                         return res.status(401).send({
-                            message: 'Password is not valid!'
+                            message: 'Password is not valid!',
                         });
                     }
                     // User authenticated; Creating JWT
