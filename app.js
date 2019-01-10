@@ -13,7 +13,20 @@ const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 
-/** Custom auth checking middleware */
+/** Instantiate server */
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+/** Use middlewares */
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
+app.use(express.static('public'));
+app.use(cookieParser());
+
+/** Custom auth-checking middleware */
 const checkAuth = (req, res, next) => {
     // console.log('Checking authentication');
     if (typeof req.cookies.nToken === 'undefined' || req.cookies === null) {
@@ -26,9 +39,7 @@ const checkAuth = (req, res, next) => {
     next();
 };
 
-/** Instantiate server */
-const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(checkAuth);
 
 /** Database connection */
 const mongoose = require('mongoose');
@@ -40,21 +51,12 @@ db.once('open', () => {
     console.log('Database connected successfully.');
 });
 
-/** Use middlewares */
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(methodOverride('_method'));
-app.use(express.static('public'));
-app.use(bodyParser.json());
-app.use(cookieParser());
-app.use(checkAuth);
-
 /** Require controllers */
-// require('./controllers/auth.js')(app);
+require('./controllers/auth.js')(app);
 require('./controllers/about.js')(app);
 require('./controllers/quizzes.js')(app);
-// require('./controllers/users.js')(app);
+require('./controllers/nameLists.js')(app);
+require('./controllers/users.js')(app);
 
 /** Port listener */
 app.listen(PORT, () => {

@@ -4,11 +4,11 @@
     <a href="/">Try again.</a>
 </div>
 <br>
-<form action="" method="POST">
+<form action="/answers" method="POST">
     <fieldset>
     {{#each names}}
         <div>
-            <input value="{{this}}" name="name" type="checkbox"/>
+            <input value="{{this}}" name="names" type="checkbox"/>
             <label for="{{this}}">{{this}}</label>
         </div>
     {{/each}}

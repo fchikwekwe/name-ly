@@ -1,0 +1,15 @@
+<form method="POST" action="/sign-up">
+    <fieldset>
+        <legend>Sign Up</legend>
+        {{> user}}
+        <div class="form-group">
+            <input class="form-control" id="nameList" type="hidden" name="nameList" value="{{nameList.names}}"/>
+        </div>
+
+        <div class="form-group">
+            <a href="/sign-up">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </a>
+        </div>
+    </fieldset>
+</form>
