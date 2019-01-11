@@ -22,9 +22,3 @@ module.exports = (app) => {
             });
     });
 };
-
-
-// logged in user
-// takes the Quiz
-// sees names and chooses the ones they want to save
-// updates names and routes to user profile

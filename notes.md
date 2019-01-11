@@ -5,6 +5,7 @@
 - fix bottom of template pages
 - hide/show password
 
+- update README
 - write tests
 - About page template
 

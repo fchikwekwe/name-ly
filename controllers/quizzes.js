@@ -7,8 +7,6 @@ module.exports = (app) => {
     // ROOT
     app.get('/', (req, res) => {
         const currentUser = req.user;
-        res.clearCookie('nameOptions');
-        res.clearCookie('chosenNames');
         res.render('quiz', { currentUser });
     });
 
@@ -23,6 +21,8 @@ module.exports = (app) => {
 
     // QUIZ POST
     app.post('/quizzes', (req, res) => {
+        res.clearCookie('nameOptions');
+        res.clearCookie('chosenNames');
         Quiz.create(req.body)
             .then((quiz) => {
                 // eventually move this to a client side JS event listener behind a button
@@ -49,9 +49,3 @@ module.exports = (app) => {
             });
     });
 };
-
-// create quiz
-// send axios request to api
-// display the results to the user
-// save the user's chosen names to a cookie
-// send them to the login route
