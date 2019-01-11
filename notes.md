@@ -1,5 +1,4 @@
 # To Do - v0
-- write delete names route
 - user must sign up with unique username
 - log user out if they leave website
 - fix bottom of template pages
@@ -31,6 +30,7 @@
 - if new user, take quiz, sign up, see profile with names
 - if logged out user, take quiz, log in, confirm addition to profile
 - if logged in user, take quiz (form routes to put instead), see profile with updated names
+- write delete names route
 ### Pre-planning
 1. Wireframes
 2. User testing (2-5 tests)

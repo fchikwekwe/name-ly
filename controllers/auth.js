@@ -15,25 +15,49 @@ module.exports = (app) => {
 
     // SIGN-UP POST
     app.post('/sign-up', (req, res) => {
-        // CREATE User
-        const user = new User(req.body);
-        user
-            .save()
-            .then(() => {
-                const token = jwt.sign({
-                    _id: user._id,
-                }, process.env.SECRET, {
-                    expiresIn: '60 days',
-                });
-                res.cookie('nameToken', token, {
-                    maxAge: 900000,
-                    httpOnly: true,
-                });
-                res.redirect(`/users/${user._id}`);
+        const username = req.body.username;
+        const email = req.body.email;
+        console.log('username', username, 'email', email);
+        // CHECK FOR DUPLICATE USER
+        User.findOne({ username })
+            .then((oldUser) => {
+                if (!oldUser || oldUser == null) {
+                    User.findOne({ email })
+                        .then((emailUser) => {
+                            if (!emailUser || emailUser == null) {
+                                // CREATE User
+                                const user = new User(req.body);
+                                user
+                                    .save()
+                                    .then(() => {
+                                        const token = jwt.sign({
+                                            _id: user._id,
+                                        }, process.env.SECRET, {
+                                            expiresIn: '60 days',
+                                        });
+                                        res.cookie('nameToken', token, {
+                                            maxAge: 900000,
+                                            httpOnly: true,
+                                        });
+                                        res.redirect(`/users/${user._id}`);
+                                    })
+                                    .catch((err) => {
+                                        console.log(err.message);
+                                        return res.status(400).send({ err });
+                                    });
+                            } else {
+                                res.send('That email address is already in use! Please go back and login.');
+                            }
+                        })
+                        .catch((err) => {
+                            console.log(err.message);
+                        });
+                } else {
+                    res.send('That username is already in use! Please go back and login.');
+                }
             })
             .catch((err) => {
                 console.log(err.message);
-                return res.status(400).send({ err });
             });
     });
 
