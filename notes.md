@@ -1,9 +1,4 @@
-## Options
-1. Fantasy Name Generator 🧚‍♂️
-2. App/Business Name Generator 📱
-3. Unique Human Name Generator ❄️
-
-## To Do - v0
+# To Do - v0
 - write delete names route
 - user must sign up with unique username
 - log user out if they leave website
@@ -12,6 +7,12 @@
 
 - write tests
 - About page template
+
+## Options
+1. Fantasy Name Generator 🧚‍♂️
+2. App/Business Name Generator 📱
+3. Unique Human Name Generator ❄️
+
 
 # DONE
 - Write a function in API that checks if names are already in name list

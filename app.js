@@ -29,10 +29,10 @@ app.use(cookieParser());
 /** Custom auth-checking middleware */
 const checkAuth = (req, res, next) => {
     // console.log('Checking authentication');
-    if (typeof req.cookies.nToken === 'undefined' || req.cookies === null) {
+    if (typeof req.cookies.nameToken === 'undefined' || req.cookies === null) {
         req.user = null;
     } else {
-        const token = req.cookies.nToken;
+        const token = req.cookies.nameToken;
         const decodedToken = jwt.decode(token, { complete: true }) || {};
         req.user = decodedToken.payload;
     }

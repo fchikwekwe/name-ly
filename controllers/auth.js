@@ -25,7 +25,7 @@ module.exports = (app) => {
                 }, process.env.SECRET, {
                     expiresIn: '60 days',
                 });
-                res.cookie('nToken', token, {
+                res.cookie('nameToken', token, {
                     maxAge: 900000,
                     httpOnly: true,
                 });
@@ -72,7 +72,7 @@ module.exports = (app) => {
                         expiresIn: '60 days',
                     });
                     // Set a cookie and redirect to user profile
-                    res.cookie('nToken', token, {
+                    res.cookie('nameToken', token, {
                         maxAge: 900000,
                         httpOnly: true,
                     });
@@ -92,7 +92,7 @@ module.exports = (app) => {
 
     // LOGOUT
     app.get('/logout', (req, res) => {
-        res.clearCookie('nToken');
+        res.clearCookie('nameToken');
         res.redirect('/');
     });
 };
