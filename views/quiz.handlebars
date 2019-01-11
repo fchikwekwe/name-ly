@@ -1,51 +1,64 @@
-<form method="POST" action="/quizzes">
+<form class="quiz" method="POST" action="/quizzes">
 	<fieldset>
-		<legend>Welcome to Name-ly!</legend>
-		<div class="form-group">
-            <p>1. Which gender influence would you like?</p>
-			<div>
-				<input value="masculine" name="gender" type="radio"/>
-				<label for="masculine">Masculine</label>
+		<div class="row">
+			<div class="col-sm-5 intro">
+				<div class="intro-text">
+					<legend>Welcome to Name-ly!</legend>
+					<br>
+					<h2>Take the quiz.</h2>
+					<br>
+					<h2>Get unique names.</h2>
+					<br>
+				</div>
 			</div>
-            <div>
-				<input value="feminine" name="gender" type="radio"  />
-				<label for="feminine">Feminine</label>
-            </div>
-			<div>
-				<input value="unisex" name="gender" type="radio" />
-				<label for="unisex">Unisex</label>
+			<div class="col-sm-7">
+				<div class="form-group question-1">
+					<p>1. Which gender influence would you like?</p>
+					<div>
+						<input value="masculine" name="gender" type="radio" required>
+						<label for="masculine">Masculine</label>
+					</div>
+					<div>
+						<input value="feminine" name="gender" type="radio">
+						<label for="feminine">Feminine</label>
+					</div>
+					<div>
+						<input value="unisex" name="gender" type="radio">
+						<label for="unisex">Unisex</label>
+					</div>
+				</div>
+				<div class="form-group question-2">
+					<p>2. Which cultural influence would you like?</p>
+					<div>
+						<input value="American" name="cultural" type="radio" required>
+						<label for="American">American</label>
+					</div>
+					<div>
+						<input value="German" name="cultural" type="radio">
+						<label for="German">German</label>
+					</div>
+					<div>
+						<input value="Latin" name="cultural" type="radio">
+						<label for="Latin">Latin</label>
+					</div>
+				</div>
+				<div class="form-group question-3">
+					<p>3. Which literary influence would you like?</p>
+					<div class="">
+						<input value="classic" name="literary" type="radio" required>
+						<label for="classic">Classic</label>
+					</div>
+					<div class="">
+						<input value="fantasy" name="literary" type="radio">
+						<label for="fantasy">Fantasy</label>
+					</div>
+					<div class="">
+						<input value="modern" name="literary" type="radio">
+						<label for="modern">Modern</label>
+					</div>
+				</div>
+				<input id="animate" class="btn" type="submit" value="Submit">
 			</div>
-        </div>
-		<div class="form-group">
-            <p>2. Which cultural influence would you like?</p>
-			<div>
-				<input value="American" name="cultural" type="radio"/>
-				<label for="American">American</label>
-			</div>
-			<div>
-				<input value="German" name="cultural" type="radio"/>
-				<label for="German">German</label>
-			</div>
-			<div>
-				<input value="Latin" name="cultural" type="radio"/>
-				<label for="Latin">Latin</label>
-			</div>
-        </div>
-		<div class="form-group">
-            <p>3. Which literary influence would you like?</p>
-			<div class="">
-				<input value="classic" name="literary" type="radio"/>
-				<label for="classic">Classic</label>
-			</div>
-			<div class="">
-				<input value="fantasy" name="literary" type="radio"/>
-				<label for="fantasy">Fantasy</label>
-			</div>
-			<div class="">
-				<input value="modern" name="literary" type="radio"/>
-				<label for="modern">Modern</label>
-			</div>
-        </div>
-		<input type="submit" value="Submit">
+		</div>
 	</fieldset>
 </form>

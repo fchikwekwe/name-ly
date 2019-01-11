@@ -1,6 +1,6 @@
 /** Informational routes go here */
 
-const NameList = ('../models/nameList');
+const NameList = require('../models/nameList');
 
 module.exports = (app) => {
     // About Page
@@ -12,9 +12,9 @@ module.exports = (app) => {
     // Name Gallery
     app.get('/names', (req, res) => {
         const currentUser = req.user;
-        NameList.find({}, (err, names) => {
+        NameList.find({}, (err, nameObj) => {
             res.render('names', {
-                names,
+                nameObj,
                 currentUser,
             });
         })

@@ -1,0 +1,104 @@
+
+/** Navbar */
+nav {
+    font-family: 'Muli', sans-serif;
+    background: #5449d2;
+}
+
+nav div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav div li {
+    display: inline-block;
+}
+
+nav div li a {
+    padding-left: 5px;
+    padding-right: 10px;
+    color: white;
+}
+
+nav div li a#home {
+    padding-left: 20px;
+    font-size: 24px;
+}
+
+nav div li a#home:hover {
+    transition: all 1s;
+    color: #fe825a;
+}
+
+nav div li a#gallery:hover, nav div li a#logout:hover, nav div li a#login:hover{
+    transition: all 1s;
+    color: #fe825a;
+}
+
+nav div li a#about:hover, nav div li a#signup:hover {
+    transition: all 1s;
+    color: #fe825a;
+}
+/** Homepage / Quiz */
+.container-fluid {
+    font-family: 'Muli', sans-serif;
+    background: #5449d2;
+    color: white;
+}
+
+form.quiz fieldset div div.intro {
+    text-align: center;
+}
+
+.btn {
+    color: #5449d2;
+    width: 100px;
+    height: 50px;
+    line-height: 64px;
+}
+#animate {
+    border: 2px solid #5449d2;
+}
+
+#animate:hover {
+    background-color: #5449d2;
+    border: 2px solid white;
+    color: white;
+}
+/** Footer */
+footer {
+    background: #5449d2;
+    height: 100px;
+}
+/** About */
+/** Login */
+/** Sign-up */
+/** Name Gallery */
+.name-gallery ul {
+    columns: 4;
+    list-style-type: none;
+}
+
+@media(max-width: 500px) {
+    .name-gallery ul {
+        columns: 2;
+        list-style-type: none;
+    }
+}
+
+.name-gallery ul li {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.name-gallery {
+    text-align: center;
+}
+
+@media(max-width: 860px) {
+    h2.name-gallery {
+        font-size: 24px;
+    }
+}
+
+/** Profile */
