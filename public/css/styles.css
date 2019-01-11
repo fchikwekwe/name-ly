@@ -46,9 +46,47 @@ nav div li a#about:hover, nav div li a#signup:hover {
     color: white;
 }
 
-form.quiz fieldset div div.intro {
+form.quiz {
     text-align: center;
 }
+
+.question-set {
+    padding-top: 20px;
+}
+
+label.radio-style {
+    padding:3px 0;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #5449d2;
+    background-color: white;
+    width: 60%;
+    border: 2px;
+    border-radius: 10px;
+    border-color: #fe825a;
+}
+
+label.radio-style:hover {
+    color: white;
+    background-color: #5449d2;
+    border-color: #fe825a;
+}
+
+div.intro-text {
+    display: inline-block;
+    padding:0 .75em;
+    box-shadow: 0 0 3em rgba(166, 166, 166);
+}
+div.intro-text:hover {
+    box-shadow: none;
+    animation: glow 2s infinite;
+}
+@keyframes glow {
+    0%   {  box-shadow: 0 0 3em rgba(166, 166, 166,1) }
+    50%   {  box-shadow: 0 0 3em rgba(166, 166, 166,0.5) }
+    100% { box-shadow: 0 0 3em rgba(166, 166, 166,1) }
+}
+
 
 .btn {
     color: #5449d2;
@@ -56,23 +94,52 @@ form.quiz fieldset div div.intro {
     height: 50px;
     line-height: 64px;
 }
-#animate {
+.animate {
     border: 2px solid #5449d2;
 }
 
-#animate:hover {
+.animate:hover {
     background-color: #5449d2;
     border: 2px solid white;
     color: white;
 }
+
+.card {
+    color: #5449d2;
+}
+
+p.questions {
+    font-size: 24px;
+}
+
 /** Footer */
 footer {
+    font-family: 'Muli', sans-serif;
     background: #5449d2;
+    color: white;
     height: 100px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+}
+
+footer div div a {
+    color: white;
+}
+
+footer div div a:hover {
+    color: #fe825a;
 }
 /** About */
-/** Login */
-/** Sign-up */
+/** Login / Sign-up */
+.login-form {
+    text-align: center;
+    border: 4px;
+    border-color: white;
+}
+form.user-form {
+    display: inline-block;
+    width: 300px;
+}
 /** Name Gallery */
 .name-gallery ul {
     columns: 4;

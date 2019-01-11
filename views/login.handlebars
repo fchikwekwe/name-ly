@@ -1,12 +1,14 @@
-<form method="POST" action="/login">
-    <fieldset>
-        <legend>Login</legend>
-        {{> user}}
+<div class="login-form">
+    <form class="user-form" method="POST" action="/login">
+        <fieldset>
+            <legend>Login</legend>
+            {{> user}}
 
-        <div class="form-group">
-            <a href="/login">
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </a>
-        </div>
-    </fieldset>
-</form>
+            <div class="form-group">
+                <a href="/login">
+                    <button class="btn animate" type="submit">Submit</button>
+                </a>
+            </div>
+        </fieldset>
+    </form>
+</div>

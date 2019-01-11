@@ -1,23 +1,25 @@
-<form method="POST" action="/sign-up">
-    <fieldset>
-        <legend>Sign Up</legend>
-        <!-- Email -->
-        <div class="form-group">
-            <label for="email">Email</label><br>
-            <input class="form-control" id="email" type="email" name="email" placeholder="email" required>
-        </div>
+<div class="login-form">
+    <form class="user-form" method="POST" action="/sign-up">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label><br>
+                <input class="form-control" id="email" type="email" name="email" placeholder="email" required>
+            </div>
 
-        {{> user}}
-        {{#each nameList.names}}
-        <div class="form-group">
-            <input class="form-control" id="nameList" type="hidden" name="nameList" value="{{this}}">
-        </div>
-        {{/each}}
+            {{> user}}
+            {{#each nameList.names}}
+            <div class="form-group">
+                <input class="form-control" id="nameList" type="hidden" name="nameList" value="{{this}}">
+            </div>
+            {{/each}}
 
-        <div class="form-group">
-            <a href="/sign-up">
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </a>
-        </div>
-    </fieldset>
-</form>
+            <div class="form-group">
+                <a href="/sign-up">
+                    <button class="btn animate" type="submit">Submit</button>
+                </a>
+            </div>
+        </fieldset>
+    </form>
+</div>

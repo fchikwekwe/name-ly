@@ -1,64 +1,61 @@
 <form class="quiz" method="POST" action="/quizzes">
 	<fieldset>
-		<div class="row">
-			<div class="col-sm-5 intro">
-				<div class="intro-text">
-					<legend>Welcome to Name-ly!</legend>
+		<div class="col-md-6 offset-md-3">
+			<div class="intro">
+				<!-- <legend>W e l c o m e t o N a m e - l y.</legend> -->
+				<div class="intro-text card">
 					<br>
-					<h2>Take the quiz.</h2>
-					<br>
-					<h2>Get unique names.</h2>
+					<h2>Take the quiz. Get unique names.</h2>
 					<br>
 				</div>
 			</div>
-			<div class="col-sm-7">
-				<div class="form-group question-1">
-					<p>1. Which gender influence would you like?</p>
-					<div>
-						<input value="masculine" name="gender" type="radio" required>
-						<label for="masculine">Masculine</label>
-					</div>
-					<div>
-						<input value="feminine" name="gender" type="radio">
-						<label for="feminine">Feminine</label>
-					</div>
-					<div>
-						<input value="unisex" name="gender" type="radio">
-						<label for="unisex">Unisex</label>
-					</div>
-				</div>
-				<div class="form-group question-2">
-					<p>2. Which cultural influence would you like?</p>
-					<div>
-						<input value="American" name="cultural" type="radio" required>
-						<label for="American">American</label>
-					</div>
-					<div>
-						<input value="German" name="cultural" type="radio">
-						<label for="German">German</label>
-					</div>
-					<div>
-						<input value="Latin" name="cultural" type="radio">
-						<label for="Latin">Latin</label>
-					</div>
-				</div>
-				<div class="form-group question-3">
-					<p>3. Which literary influence would you like?</p>
-					<div class="">
-						<input value="classic" name="literary" type="radio" required>
-						<label for="classic">Classic</label>
-					</div>
-					<div class="">
-						<input value="fantasy" name="literary" type="radio">
-						<label for="fantasy">Fantasy</label>
-					</div>
-					<div class="">
-						<input value="modern" name="literary" type="radio">
-						<label for="modern">Modern</label>
-					</div>
-				</div>
-				<input id="animate" class="btn" type="submit" value="Submit">
+		<div class="question-set">
+			<div class="form-group question-1">
+				<p class="questions">1. Which gender influence would you like?</p>
+				<label class="radio-style"for="masculine">
+					<input id="masculine" value="masculine" name="gender" type="radio" required>
+					Masculine
+				</label>
+				<label class="radio-style" for="feminine">
+					<input id="feminine" value="feminine" name="gender" type="radio">
+					Feminine
+				</label>
+				<label class="radio-style" for="unisex">
+					<input id="unisex" value="unisex" name="gender" type="radio">
+					Unisex
+				</label>
 			</div>
+			<div class="form-group question-2">
+				<p class="questions">2. Which cultural influence would you like?</p>
+				<label for="American" class="radio-style">
+					<input value="American" name="cultural" type="radio" required>
+					American
+				</label>
+				<label class="radio-style"for="German">
+					<input value="German" name="cultural" type="radio">
+					German
+				</label>
+				<label class="radio-style"for="Latin">
+					<input value="Latin" name="cultural" type="radio">
+					Latin
+				</label>
+			<div class="form-group question-3">
+				<p class="questions">3. Which literary influence would you like?</p>
+				<label class="radio-style"for="classic">
+					<input value="classic" name="literary" type="radio" required>
+					Classic
+				</label>
+				<label class="radio-style" for="fantasy">
+					<input value="fantasy" name="literary" type="radio">
+					Fantasy
+				</label>
+				<label class="radio-style"for="Modern">
+					<input value="modern" name="literary" type="radio">
+					Modern
+				</label>
+			</div>
+			<input class="btn animate" type="submit" value="Submit">
 		</div>
+	</div>
 	</fieldset>
 </form>
