@@ -44,6 +44,7 @@ nav div li a#about:hover, nav div li a#signup:hover {
     font-family: 'Muli', sans-serif;
     background: #5449d2;
     color: white;
+    padding-bottom: 10px;
 }
 
 form.quiz {
@@ -118,15 +119,15 @@ p.questions {
 /** Footer */
 footer {
     font-family: 'Muli', sans-serif;
-    background: #5449d2;
-    color: white;
+    background: white;
+    color: #5449d2;
     height: 100px;
     text-align: center;
-    padding: 20px 10px 20px 10px;
+    padding: 40px 10px 20px 10px;
 }
 
 footer div div a {
-    color: white;
+    color: #5449d2;
 }
 
 footer div div a:hover {
