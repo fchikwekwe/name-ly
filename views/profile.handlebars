@@ -1,6 +1,6 @@
 <div class="profile-page">
     <h2 class="profile-title">Welcome, {{user.username}}</h2>
-    <form action="#" method="DELETE">
+    <form action="/users/{{user._id}}/delete?_method=PUT" method="POST">
         <fieldset>
             <legend class="profile-title">Your saved names: </legend>
             {{#each user.nameList}}

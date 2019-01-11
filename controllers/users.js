@@ -7,7 +7,6 @@ module.exports = (app) => {
         User.findById(req.params.id, (err, user) => {
             res.clearCookie('chosenNames'); // unsure if this is a good idea
             const currentUser = req.user;
-            console.log(currentUser);
             res.render('profile', {
                 user,
                 currentUser,
@@ -48,6 +47,22 @@ module.exports = (app) => {
         const updateNames = req.body.names;
         User.findByIdAndUpdate(currentUser._id,
             { $push: { nameList: updateNames } })
+            .then((user) => {
+                res.redirect(`/users/${user._id}`);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    });
+
+    // UPDATE LOGGED IN USER and REMOVE NAMES
+    app.put('/users/:id/delete', (req, res) => {
+        const currentUser = req.user;
+        const deleting = req.body.deleteNames;
+        console.log(req);
+        console.log('delete: ', deleting);
+        User.findByIdAndUpdate(currentUser._id,
+            { $pull: { nameList: deleting } })
             .then((user) => {
                 res.redirect(`/users/${user._id}`);
             })

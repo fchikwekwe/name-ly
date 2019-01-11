@@ -22,4 +22,14 @@ module.exports = (app) => {
                 console.log(err.message);
             });
     });
+    // DELETE NAMES
+    app.delete('/answers/delete', (req, res) => {
+        const currentUser = req.user;
+        NameList.deleteOne(req.params.id)
+            .then(() => {
+                res.redirect(`/users/${currentUser._id}`);
+            }).catch((err) => {
+                console.log(err.message);
+            });
+    });
 };
