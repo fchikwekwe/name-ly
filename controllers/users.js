@@ -4,70 +4,88 @@ const User = require('../models/user');
 module.exports = (app) => {
     // USER SHOW
     app.get('/users/:id', (req, res) => {
-        User.findById(req.params.id, (err, user) => {
-            res.clearCookie('chosenNames'); // unsure if this is a good idea
-            const currentUser = req.user;
-            res.render('profile', {
-                user,
-                currentUser,
+        const currentUser = req.user;
+        if (currentUser) {
+            User.findById(req.params.id, (err, user) => {
+                res.clearCookie('chosenNames'); // unsure if this is a good idea
+                res.render('profile', {
+                    user,
+                    currentUser,
+                });
             });
-        });
+        } else {
+            res.send('You need to be logged in to do that!');
+        }
     });
 
     // UPDATE NAMES FORM
     app.get('/users/:id/update', (req, res) => {
         const currentUser = req.user;
         const names = req.cookies.chosenNames.names;
-        console.log(names);
-        User.findById(req.params.id, (err, user) => {
-            res.render('update', {
-                names,
-                user,
-                currentUser,
+        if (currentUser) {
+            User.findById(req.params.id, (err, user) => {
+                res.render('update', {
+                    names,
+                    user,
+                    currentUser,
+                });
             });
-        });
+        } else {
+            res.send('You need to be logged in to do that!');
+        }
     });
 
     // UPDATE and ADD NAMES
     app.put('/users/:id/update', (req, res) => {
+        const currentUser = req.user;
         const updateNames = req.body.names;
-        User.findByIdAndUpdate(req.params.id,
-            { $push: { nameList: updateNames } })
-            .then((user) => {
-                res.redirect(`/users/${user._id}`);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
+        if (currentUser) {
+            User.findByIdAndUpdate(req.params.id,
+                { $push: { nameList: updateNames } })
+                .then((user) => {
+                    res.redirect(`/users/${user._id}`);
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
+        } else {
+            res.send('You need to be logged in to do that!');
+        }
     });
 
     // UPDATE LOGGED IN USER and ADD NAMES
     app.put('/users/:id/answers', (req, res) => {
         const currentUser = req.user;
         const updateNames = req.body.names;
-        User.findByIdAndUpdate(currentUser._id,
-            { $push: { nameList: updateNames } })
-            .then((user) => {
-                res.redirect(`/users/${user._id}`);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
+        if (currentUser) {
+            User.findByIdAndUpdate(currentUser._id,
+                { $push: { nameList: updateNames } })
+                .then((user) => {
+                    res.redirect(`/users/${user._id}`);
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
+        } else {
+            res.send('You need to be logged in to do that!');
+        }
     });
 
     // UPDATE LOGGED IN USER and REMOVE NAMES
     app.put('/users/:id/delete', (req, res) => {
         const currentUser = req.user;
-        const deleting = req.body.deleteNames;
-        console.log(req);
-        console.log('delete: ', deleting);
-        User.findByIdAndUpdate(currentUser._id,
-            { $pull: { nameList: deleting } })
-            .then((user) => {
-                res.redirect(`/users/${user._id}`);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
+        const deleteUser = req.body.deleteNames;
+        if (currentUser) {
+            User.findByIdAndUpdate(currentUser._id,
+                { $pull: { nameList: deleteUser } })
+                .then((user) => {
+                    res.redirect(`/users/${user._id}`);
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
+        } else {
+            res.send('You need to be logged in to do that!');
+        }
     });
 };
