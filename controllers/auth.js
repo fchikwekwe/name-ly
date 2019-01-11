@@ -1,4 +1,4 @@
-/** Put authorization routes here */
+/** Authorization routes here */
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 

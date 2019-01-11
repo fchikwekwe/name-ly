@@ -1,3 +1,4 @@
+/** Names routes here */
 const NameList = require('../models/nameList');
 
 module.exports = (app) => {

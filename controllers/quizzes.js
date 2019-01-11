@@ -1,4 +1,4 @@
-/** Put routes for quiz and selection here */
+/** Quiz and name selection routes here */
 const axios = require('axios');
 
 const Quiz = require('../models/quiz');

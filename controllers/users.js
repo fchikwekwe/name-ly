@@ -1,4 +1,4 @@
-/** Put routes inside user profile here */
+/** User profile routes here */
 const User = require('../models/user');
 
 module.exports = (app) => {

@@ -1,3 +1,4 @@
+/** Name list objects */
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
