@@ -4,14 +4,10 @@
 3. Unique Human Name Generator ❄️
 
 ## To Do - v0
-- if new user, take quiz, sign up, see profile with names
-- if logged out user, take quiz, log in, confirm addition to profile
-- if logged in user, take quiz (form routes to put instead), see profile with updated names
+- write delete names route
+-
 - write tests
-- Profile page template
 - About page template
-- Name page template
-- Work on improving look of UI
 
 # DONE
 - Write a function in API that checks if names are already in name list
@@ -23,6 +19,12 @@
 - use axios to send data
 - make names clickable to allow user to save name to profile
 - CRUD users w/ JWTs
+- Name page template
+- Work on improving look of UI
+- Profile page template
+- if new user, take quiz, sign up, see profile with names
+- if logged out user, take quiz, log in, confirm addition to profile
+- if logged in user, take quiz (form routes to put instead), see profile with updated names
 ### Pre-planning
 1. Wireframes
 2. User testing (2-5 tests)

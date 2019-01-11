@@ -1,1 +1,15 @@
-<p>{{user}}</p>
+<div class="profile-page">
+    <h2 class="profile-title">Welcome, {{user.username}}</h2>
+    <form action="#" method="DELETE">
+        <fieldset>
+            <legend class="profile-title">Your saved names: </legend>
+            {{#each user.nameList}}
+                <div>
+                    <input type="checkbox" name="deleteNames" value="{{this}}">
+                    <label for="{{this}}">{{this}}</label>
+                </div>
+            {{/each}}
+            <input class="btn animate"type="submit" value="Delete Names">
+        </fieldset>
+    </form>
+</div>

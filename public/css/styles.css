@@ -89,7 +89,7 @@ div.intro-text:hover {
 
 .btn {
     color: #5449d2;
-    width: 100px;
+    width: 140px;
     height: 50px;
     line-height: 64px;
 }
@@ -168,3 +168,10 @@ form.user-form {
 }
 
 /** Profile */
+.profile-page {
+    text-align: center;
+}
+
+.profile-title {
+    padding-bottom: 20px;
+}
