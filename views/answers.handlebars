@@ -1,36 +1,38 @@
-<div>
-    <h2>Your Names:</h2>
-    <p>Choose the names you would like to save.</p>
-    <a href="/">Try again.</a>
-</div>
-<br>
-<!-- If the user is already logged in,
-then we go straight to updating their profile -->
-{{#if currentUser}}
-<form action="/users/{{currentUser._id}}/answers?_method=PUT" method="POST">
-    <fieldset>
-    {{#each names}}
-        <div>
-            <input value="{{this}}" name="names" type="checkbox">
-            <label for="{{this}}">{{this}}</label>
-        </div>
-    {{/each}}
-    <input type="submit" value="Submit">
-    </fieldset>
-</form>
+<div class="profile-page">
+    <div>
+        <h2>Your Names:</h2>
+        <p>Choose the names you would like to save.</p>
+        <a class="try-again btn animate" href="/">Try Again</a>
+    </div>
+    <br>
+    <!-- If the user is already logged in,
+    then we go straight to updating their profile -->
+    {{#if currentUser}}
+    <form action="/users/{{currentUser._id}}/answers?_method=PUT" method="POST">
+        <fieldset>
+        {{#each names}}
+            <div>
+                <input value="{{this}}" name="names" type="checkbox">
+                <label for="{{this}}">{{this}}</label>
+            </div>
+        {{/each}}
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
 
-{{else}}
-<!-- If they are not yet logged in,
-then we take the normal route through /answers -->
-<form action="/answers" method="POST">
-    <fieldset>
-    {{#each names}}
-        <div>
-            <input value="{{this}}" name="names" type="checkbox">
-            <label for="{{this}}">{{this}}</label>
-        </div>
-    {{/each}}
-    <input type="submit" value="Submit">
-    </fieldset>
-</form>
-{{/if}}
+    {{else}}
+    <!-- If they are not yet logged in,
+    then we take the normal route through /answers -->
+    <form action="/answers" method="POST">
+        <fieldset>
+        {{#each names}}
+            <div>
+                <input value="{{this}}" name="names" type="checkbox">
+                <label for="{{this}}">{{this}}</label>
+            </div>
+        {{/each}}
+        <input class="btn animate" type="submit" value="Submit">
+        </fieldset>
+    </form>
+    {{/if}}
+</div>

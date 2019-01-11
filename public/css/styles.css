@@ -111,6 +111,10 @@ p.questions {
     font-size: 24px;
 }
 
+.try-again {
+    background-color: white;
+}
+
 /** Footer */
 footer {
     font-family: 'Muli', sans-serif;

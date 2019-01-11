@@ -5,7 +5,11 @@
 
 ## To Do - v0
 - write delete names route
--
+- user must sign up with unique username
+- log user out if they leave website
+- fix bottom of template pages
+- hide/show password
+
 - write tests
 - About page template
 
