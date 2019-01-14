@@ -2,7 +2,14 @@
     <div>
         <h2>Your Names:</h2>
         <p>Choose the names you would like to save.</p>
-        <a class="try-again btn animate" href="/">Try Again</a>
+        <form class="quiz-form" action="/tryagain" method="POST">
+            <fieldset>
+                <div class="row">
+                    <a class="try-again btn animate" href="/">Retake Quiz</a>
+                    <a class="try-again btn animate" href="/tryagain">More Names</a>
+                </div>
+            </fieldset>
+        </form>
     </div>
     <br>
     <!-- If the user is already logged in,

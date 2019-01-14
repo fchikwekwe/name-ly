@@ -1,7 +1,6 @@
 # To Do - v0
 - add option to generate new names without retaking quiz
 - write error pages
-- update README
 - write tests
 - About page template
 
@@ -32,7 +31,7 @@
 - update profile page
 - log user out if they leave website
 - hide/show password option
-
+- update README
 
 ### Pre-planning
 1. Wireframes
