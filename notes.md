@@ -11,7 +11,6 @@
 2. App/Business Name Generator 📱
 3. Unique Human Name Generator ❄️
 
-
 # DONE
 - Write a function in API that checks if names are already in name list
 - Write quiz questions and answers
