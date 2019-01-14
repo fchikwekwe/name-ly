@@ -1,8 +1,7 @@
 # To Do - v0
-- log user out if they leave website
 - hide/show password option
-- update profile page
 
+- write error pages
 - update README
 - write tests
 - About page template
@@ -32,6 +31,9 @@
 - write delete names route
 - user must sign up with unique username and email
 - fix bottom of template pages
+- update profile page
+- log user out if they leave website
+
 ### Pre-planning
 1. Wireframes
 2. User testing (2-5 tests)
