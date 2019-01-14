@@ -1,6 +1,5 @@
 # To Do - v0
-- hide/show password option
-
+- add option to generate new names without retaking quiz
 - write error pages
 - update README
 - write tests
@@ -32,6 +31,8 @@
 - fix bottom of template pages
 - update profile page
 - log user out if they leave website
+- hide/show password option
+
 
 ### Pre-planning
 1. Wireframes
