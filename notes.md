@@ -1,7 +1,6 @@
 # To Do - v0
 - log user out if they leave website
-- fix bottom of template pages
-- hide/show password
+- hide/show password option
 
 - update README
 - write tests
@@ -31,6 +30,7 @@
 - if logged in user, take quiz (form routes to put instead), see profile with updated names
 - write delete names route
 - user must sign up with unique username and email
+- fix bottom of template pages
 ### Pre-planning
 1. Wireframes
 2. User testing (2-5 tests)
