@@ -75,25 +75,31 @@ label.radio-style:hover {
 
 div.intro-text {
     display: inline-block;
-    padding:0 .75em;
+    padding: 0 .75em;
     box-shadow: 0 0 3em rgba(166, 166, 166);
 }
+
 div.intro-text:hover {
     box-shadow: none;
     animation: glow 2s infinite;
 }
+
 @keyframes glow {
-    0%   {  box-shadow: 0 0 3em rgba(166, 166, 166,1) }
-    50%   {  box-shadow: 0 0 3em rgba(166, 166, 166,0.5) }
+    0%   { box-shadow: 0 0 3em rgba(166, 166, 166,1) }
+    50%   { box-shadow: 0 0 3em rgba(166, 166, 166,0.5) }
     100% { box-shadow: 0 0 3em rgba(166, 166, 166,1) }
 }
 
+div.main-text {
+    width: 600px;
+}
 .btn {
     color: #5449d2;
     width: 140px;
     height: 50px;
     line-height: 64px;
     margin: 10px;
+    padding: 0.5rem;
 }
 .animate {
     border: 2px solid #5449d2;
@@ -115,6 +121,7 @@ p.questions {
 
 .try-again {
     background-color: white;
+    padding: 0.5rem;
 }
 
 .quiz-form {

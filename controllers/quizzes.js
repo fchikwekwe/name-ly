@@ -7,8 +7,21 @@ module.exports = (app) => {
     // ROOT
     app.get('/', (req, res) => {
         const currentUser = req.user;
+        res.render('index', { currentUser });
+    });
+
+    // ROOT
+    app.get('/apps', (req, res) => {
+        const currentUser = req.user;
         res.clearCookie('quizResults');
-        res.render('quiz', { currentUser });
+        res.render('app-quiz', { currentUser });
+    });
+
+    // ROOT
+    app.get('/characters', (req, res) => {
+        const currentUser = req.user;
+        res.clearCookie('quizResults');
+        res.render('character-quiz', { currentUser });
     });
 
     // QUIZ POST
@@ -58,7 +71,6 @@ module.exports = (app) => {
     // TRY AGAIN
     app.get('/tryagain', (req, res) => {
         const quiz = req.cookies.quizResults;
-        // eventually move this to a client side JS event listener behind a button
         axios.post('https://name-ly-api.herokuapp.com/', {
             // convert terms to lower case to resolve edge cases
             nameNumber: 10,

@@ -1,5 +1,4 @@
 # To Do - v0
-- add option to generate new names without retaking quiz
 - write error pages
 - write tests
 - About page template
@@ -16,7 +15,7 @@
 - Build simple quiz template
 - Get user input from quiz to determine corpus
 - Implement stochastic sampling and Markov chain
-- use axios to send data
+- use Axios to send data
 - make names clickable to allow user to save name to profile
 - CRUD users w/ JWTs
 - Name page template
@@ -32,6 +31,7 @@
 - log user out if they leave website
 - hide/show password option
 - update README
+- add option to generate new names without retaking quiz
 
 ### Pre-planning
 1. Wireframes
