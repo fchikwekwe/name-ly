@@ -1,6 +1,7 @@
 # To Do - v0
 - log user out if they leave website
 - hide/show password option
+- update profile page
 
 - update README
 - write tests
