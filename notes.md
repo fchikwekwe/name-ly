@@ -1,7 +1,14 @@
+# To Do - v1
+- Add additional culture and literary options for fantasy name generator
+- Add index template for choice between baby, fantasy or app names
+- API: add source files and new endpoint APP: write new templates for app names generator
+- API: write new functions for baby names generator
+- API: update source files APP: write new templates for baby names generator
+
 # To Do - v0
-- write error pages
-- write tests
-- About page template
+- Write 'about' page template
+- Write templates for error pages
+- Write testing for existing routes and planned routes for app and baby names
 
 ## Options
 1. Fantasy Name Generator 🧚‍♂️
