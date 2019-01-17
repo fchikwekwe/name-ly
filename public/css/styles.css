@@ -51,6 +51,13 @@ form.quiz {
     text-align: center;
 }
 
+@media(max-width: 500px) {
+    form.quiz{
+        width: 450px;
+        height: 200px;
+    }
+}
+
 .question-set {
     padding-top: 20px;
 }
@@ -85,22 +92,29 @@ div.intro-text:hover {
 }
 
 @keyframes glow {
-    0%   { box-shadow: 0 0 3em rgba(166, 166, 166,1) }
-    50%   { box-shadow: 0 0 3em rgba(166, 166, 166,0.5) }
+    0% { box-shadow: 0 0 3em rgba(166, 166, 166,1) }
+    50% { box-shadow: 0 0 3em rgba(166, 166, 166,0.5) }
     100% { box-shadow: 0 0 3em rgba(166, 166, 166,1) }
 }
 
 div.main-text {
     width: 600px;
 }
+
 .btn {
     color: #5449d2;
-    width: 140px;
+    width: 150px;
     height: 50px;
     line-height: 64px;
     margin: 10px;
     padding: 0.5rem;
 }
+
+#btn-main {
+    color: #5449d2;
+    width: 160px;
+}
+
 .animate {
     border: 2px solid #5449d2;
 }
@@ -126,6 +140,12 @@ p.questions {
 
 .quiz-form {
     display: inline-block;
+}
+
+.choice {
+    display: inline-block;
+    width: 400px;
+    margin: auto 0;
 }
 
 /** Footer */

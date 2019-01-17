@@ -1,6 +1,6 @@
-# Name-ly
+# name-ly
 
-Welcome to Name-ly! Yes, this app generated its own name!
+Welcome to name-ly! Yes, this app generated its own name!
 
 I'll take your through a short quiz and give you a list of awesome, unique names. Whether you're at a loss while creating a Dungeons and Dragons character, or if you're looking for some unique options to name your child, give it a try at https://name-ly.herokuapp.com/.
 
@@ -23,5 +23,5 @@ Continued development on this project will be ongoing. For a list of current tas
 
 If you would like to contribute to this project, please contact @fchikwekwe and I'll be glad to have you.
 
-#### Contributors 
+#### Contributors
 👩🏾‍💻 Faith Chikwekwe
