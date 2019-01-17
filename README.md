@@ -4,8 +4,10 @@ Welcome to name-ly! Yes, this app generated its own name!
 
 I'll take your through a short quiz and give you a list of awesome, unique names. Whether you're at a loss while creating a Dungeons and Dragons character, or if you're looking for some unique options to name your child, give it a try at https://name-ly.herokuapp.com/.
 
-## Features
-Right now, you answer three short questions on the homepage and you'll be presented with a list of name options. If you don't like those names, hit the try again button to retake the quiz.
+### If you're here to see how I'm developing this app, check out 'notes.md' for my development plan.
+
+## Current Features
+Right now, this app generates human/fantasy names. You answer three short questions on the homepage and you'll be presented with a list of name options. If you don't like those names, hit the 'More Names' button for a new list or retake the quiz for different options.
 
 You can save the names to your profile by logging in or signing up!
 

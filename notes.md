@@ -28,7 +28,7 @@ This is a document updated with notes, ideas and my future plans for the app.
 - Build simple quiz template
 - Get user input from quiz to determine corpus
 - Implement stochastic sampling and Markov chain
-- use Axios to send data
+- use Axios to send data to API
 - make names clickable to allow user to save name to profile
 - CRUD users w/ JWTs
 - Name page template
@@ -39,11 +39,11 @@ This is a document updated with notes, ideas and my future plans for the app.
 - if logged in user, take quiz (form routes to put instead), see profile with updated names
 - write delete names route
 - user must sign up with unique username and email
-- fix bottom of template pages
+- fix bottom of template pages to look more polished
 - update profile page
 - log user out if they leave website
 - hide/show password option
-- update README
+- update README with some documentation and app details
 - add option to generate new names without retaking quiz
 
 ### Pre-planning
