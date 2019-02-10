@@ -2,14 +2,22 @@
     <div class="navbar-header pull-left">
         <li><a id="home" href="/">n a m e-l y</a><li>
     </div>
-    <div class="pull-right">
-        <li><a id="gallery" href="/names">G a l l e r y</a></li>
-        <!-- <li><a id="about" href="/about">A b o u t</a></li> -->
-        {{#if currentUser}}
-        <li><a id="logout"href="/logout">L o g o u t</a></li>
-        {{else}}
-        <li><a id="login"href="/login">L o g i n</a></li>
-        <li><a id="signup"href="/sign-up">S i g n - u p</a></li>
-        {{/if}}
+    <div class="pull-right row">
+        <div class="col-sm-4">
+            <form action="/search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn animate" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-sm-8">
+            <li><a id="gallery" href="/names">G a l l e r y</a></li>
+            <!-- <li><a id="about" href="/about">A b o u t</a></li> -->
+            {{#if currentUser}}
+            <li><a id="logout"href="/logout">L o g o u t</a></li>
+            {{else}}
+            <li><a id="login"href="/login">L o g i n</a></li>
+            <li><a id="signup"href="/sign-up">S i g n - u p</a></li>
+            {{/if}}
+        </div>
     </div>
 </nav>

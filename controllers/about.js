@@ -22,4 +22,23 @@ module.exports = (app) => {
                 console.log(err.message);
             });
     });
+
+    // Search
+    app.get('/search', (req, res) => {
+        NameList
+            .find(
+                { $text: { $search: req.query.term } },
+                { score: { $meta: 'textScore' } }
+            )
+            .sort({ score : { $meta: 'textScore' } })
+            .limit(20)
+            .exec((err, nameObj) => {
+                if (err) { return res.status(400).send(err) }
+
+                return res.render('names-index', {
+                    nameObj,
+                    term: req.query.term
+                });
+            });
+    });
 };
