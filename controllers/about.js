@@ -25,20 +25,24 @@ module.exports = (app) => {
 
     // Search
     app.get('/search', (req, res) => {
-        NameList
-            .find(
-                { $text: { $search: req.query.term } },
-                { score: { $meta: 'textScore' } }
-            )
-            .sort({ score : { $meta: 'textScore' } })
-            .limit(20)
-            .exec((err, nameObj) => {
-                if (err) { return res.status(400).send(err) }
+        const page = req.query.page || 1;
 
+        NameList
+            .paginate(
+                { $text: { $search: req.query.term } },
+                { score: { $meta: 'textScore' } },
+                { page, limit: 20, sort: { score: { $meta: 'textScore' } } }
+            )
+            .then((results) => {
                 return res.render('names-index', {
-                    nameObj,
-                    term: req.query.term
+                    names: results.docs,
+                    term: req.query.term,
+                    pagesCount: results.pages,
+                    currentPage: page,
                 });
+            })
+            .catch((err) => {
+                return res.status(400).send(err)
             });
     });
 };
