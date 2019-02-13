@@ -39,7 +39,10 @@ const checkAuth = (req, res, next) => {
     next();
 };
 
+
 app.use(checkAuth);
+
+/** Send Email */
 
 /** Database connection */
 const mongoose = require('mongoose');

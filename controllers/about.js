@@ -26,7 +26,7 @@ module.exports = (app) => {
     // Search
     app.get('/search', (req, res) => {
         const page = req.query.page || 1;
-
+        let i = 1;
         NameList
             .paginate(
                 { $text: { $search: req.query.term } },
@@ -35,14 +35,14 @@ module.exports = (app) => {
             )
             .then((results) => {
                 return res.render('names-index', {
-                    names: results.docs,
+                    nameObj: results.docs,
                     term: req.query.term,
                     pagesCount: results.pages,
                     currentPage: page,
                 });
             })
             .catch((err) => {
-                return res.status(400).send(err)
+                return res.status(400).send(err);
             });
     });
 };

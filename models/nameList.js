@@ -1,6 +1,12 @@
 /** Name list objects */
 const mongoose = require('mongoose');
 
+const mongoosePaginate = require('mongoose-paginate');
+
+mongoosePaginate.paginate.options = {
+    limit: 3,
+};
+
 const Schema = mongoose.Schema;
 
 const NameSchema = new Schema({
@@ -18,4 +24,7 @@ const NameSchema = new Schema({
     },
 });
 
-module.exports = mongoose.model('name', NameSchema);
+NameSchema.plugin(mongoosePaginate);
+NameSchema.index({ names: 'text' });
+
+module.exports = mongoose.model('Name', NameSchema);
