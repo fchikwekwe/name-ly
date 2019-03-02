@@ -44,7 +44,27 @@ module.exports = (app) => {
                 maxAge: 900000,
                 httpOnly: true,
             });
-            res.redirect(`/users/${user._id}`);
+            const sendEmail = {
+                email: req.body.email,
+                username: req.body.username,
+            };
+            nodemailerMailgun.sendMail({
+                from: 'no-reply@name-ly.com',
+                to: sendEmail.email,
+                subject: `Welcome, ${sendEmail.username}`,
+                template: {
+                    name: path.join(__dirname, '..', '/views/email.handlebars'),
+                    engine: 'handlebars',
+                    context: user,
+                },
+            }).then((info) => {
+                console.log(`Response: ${info}`);
+                res.redirect(`/users/${user._id}`);
+            })
+            .catch((err) => {
+                console.log(`Error: ${err}`);
+                res.redirect(`/users/${user._id}`);
+                });
         } catch (err) {
             console.log(err);
         }

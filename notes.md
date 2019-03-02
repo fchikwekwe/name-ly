@@ -7,7 +7,10 @@ This is a document updated with notes, ideas and my future plans for the app.
 2. App/Business Name Generator 📱
 3. Baby Names Generator 🍼
 
-## Things I'd like to accomplish
+### Adding for BEW 2.1 update
+- email on signup
+- full text search on gallery
+- adding profile picture with AWS
 
 ### To Do - v1
 - Add additional culture and literary options for fantasy name generator
