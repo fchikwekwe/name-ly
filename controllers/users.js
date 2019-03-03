@@ -1,11 +1,13 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/user');
 
 // UPLOADING TO AWS S3
 const multer = require('multer');
 
 const upload = multer({ dest: 'uploads/' });
 const Upload = require('s3-uploader');
+
+// Import model
+const User = require('../models/user');
 
 
 const client = new Upload(process.env.s3_BUCKET, {
@@ -145,7 +147,7 @@ module.exports = (app) => {
 
                         user.avatar = url;
                         user.update();
-                    })
+                    });
                     res.redirect(`/users/${user._id}`);
                 });
             }
