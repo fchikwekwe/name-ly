@@ -1,0 +1,19 @@
+<h2>Edit your profile below, {{user.username}}</h2>
+
+<form class="login-form" id="edit-user" action="/users/{{user._id}}/profileUpdate?_method=PUT" method="POST">
+    <fieldset>
+        <label for="username">Username</label>
+        <input id="username" name="username" value="{{user.username}}" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" value="{{user.email}}" required>
+
+        <label for="avatar">Avatar</label>
+        <input id="avatar" name="avatar" type="file" value="{{user.avatar}}" required>
+
+        <input class="btn animate" type="submit" value="Save">
+    </fieldset>
+</form>
+<a href="/users/{{user._id}}">
+    <button class="btn btn-danger" type="submit">Cancel</button>
+</a>

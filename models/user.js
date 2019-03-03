@@ -27,6 +27,9 @@ const UserSchema = new Schema({
     nameList: {
         type: Array,
     },
+    avatar: {
+        type: String,
+    },
 });
 
 // Must use function here! ES6 => functions do not bind this!
